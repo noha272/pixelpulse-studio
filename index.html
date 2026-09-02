@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PixelPulse Studio — Graphic Design & Instagram Management</title>
+  <meta name="description" content="PixelPulse Studio helps brands shine with stunning graphics and engaging Instagram management — logos, post templates, content calendars, captions, and growth strategies." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="PixelPulse Studio" />
+  <meta property="og:description" content="Designs that speak. Posts that connect. Graphic design & Instagram management for growing brands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=PixelPulse+Studio" />
+  <meta property="og:url" content="https://pixelpulse.studio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root{
+      --brand-1: #6a11cb;
+      --brand-2: #2575fc;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --card-bg: #f9f9f9;
+      --max-width: 1100px;
+      --radius: 8px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 0;
+      line-height: 1.6;
+      color: #222;
+      background: var(--bg);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    header{
+      background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+      color: #fff;
+      padding: 56px 20px;
+      text-align: center;
+    }
+    header .container,
+    main .container { max-width: var(--max-width); margin: 0 auto; }
+
+    header h1{
+      font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+      margin: 0 0 10px;
+      line-height:1.05;
+    }
+    header p{ margin:0 0 22px; font-size: clamp(1rem, 1.6vw, 1.15rem); color: rgba(255,255,255,0.92) }
+
+    .btn{
+      display: inline-block;
+      background: #fff;
+      color: var(--brand-2);
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(37,117,252,0.12);
+    }
+    .btn:focus-visible{ outline: 3px solid rgba(255,255,255,0.18); outline-offset: 3px; }
+
+    main{ padding: 48px 20px; }
+    section{ padding: 36px 0; }
+
+    h2{ text-align:center; color: var(--brand-2); margin: 0 0 22px; font-size:1.5rem; }
+
+    /* Services grid */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .service{
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .service h3{ margin-top:0; color:#111; }
+    .service p{ color:var(--muted); margin:8px 0 0; }
+
+    /* Portfolio */
+    .portfolio{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      justify-items:center;
+      align-items:start;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .portfolio img{
+      width:100%;
+      height:auto;
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      display:block;
+    }
+
+    /* Waitlist form */
+    #waitlist form{
+      display: grid;
+      gap: 10px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    label{ font-size:0.9rem; color:#111; }
+    input[type="text"],
+    input[type="email"]{
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 1rem;
+    }
+    input:focus{ outline: 3px solid rgba(37,117,252,0.12); outline-offset:2px; border-color: var(--brand-2); }
+    #waitlist button{
+      background: var(--brand-2);
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+      cursor:pointer;
+    }
+    #waitlist button:disabled{ opacity:0.6; cursor:not-allowed; }
+
+    .about { max-width: var(--max-width); margin: 0 auto; color: var(--muted); }
+
+    footer{
+      background:#111827;
+      color:#f9fafb;
+      text-align:center;
+      padding: 22px 16px;
+      font-size:0.95rem;
+    }
+    footer a{ color:#fff; text-decoration:underline; }
+
+    /* Focus-visible for keyboard users */
+    :focus{ outline: none; }
+    :focus-visible{ outline: 3px solid rgba(37,117,252,0.18); outline-offset: 3px; border-radius:6px; }
+
+    /* Small screens */
+    @media (max-width:640px){
+      header{ padding:36px 16px; }
+      main{ padding: 24px 12px; }
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      * { transition: none !important; animation: none !important; }
+    }
+
+    /* Success / error message styles */
+    .form-message{ text-align:center; margin-top:12px; color:var(--brand-2); font-weight:600; }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="container">
+      <h1>Designs that Speak. Posts that Connect.</h1>
+      <p>PixelPulse Studio helps brands shine with stunning graphics and engaging Instagram management.</p>
+      <a class="btn" href="#waitlist">Join the Waitlist</a>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- Services -->
+    <section aria-labelledby="services-heading">
+      <h2 id="services-heading">Our Services</h2>
+      <div class="services" role="list">
+        <article class="service" role="listitem" aria-labelledby="gd">
+          <h3 id="gd">Graphic Design</h3>
+          <p>Logos, post templates, story highlights, and branded visuals to keep your feed cohesive and memorable.</p>
+        </article>
+        <article class="service" role="listitem" aria-labelledby="ig">
+          <h3 id="ig">Instagram Management</h3>
+          <p>Content calendars, captions, engagement tracking, and growth strategies tailored to your audience.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading">Portfolio Preview</h2>
+      <div class="portfolio" role="list">
+        <figure role="listitem">
+          <img loading="lazy" src="https://via.placeholder.com/600x400" srcset="https://via.placeholder.com/600x400 1x, https://via.placeholder.com/1200x800 2x" alt="Sample branded social media post showing bright bold typography" />
+        </figure>
+        <figure role="listitem">
+          <img loading="lazy" src="https://via.placeholder.com/600x400" srcset="https://via.placeholder.com/600x400 1x, https://via.placeholder.com/1200x800 2x" alt="Sample Instagram carousel design with product photos and text overlays" />
+        </figure>
+        <figure role="listitem">
+          <img loading="lazy" src="https://via.placeholder.com/600x400" srcset="https://via.placeholder.com/600x400 1x, https://via.placeholder.com/1200x800 2x" alt="Sample story highlight covers in a cohesive color palette" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Waitlist Signup -->
+    <section id="waitlist" aria-labelledby="waitlist-heading">
+      <h2 id="waitlist-heading">Join Our Waitlist</h2>
+      <form id="waitlist-form" novalidate>
+        <div>
+          <label for="name">Your Name</label>
+          <input id="name" name="name" type="text" placeholder="Jane Doe" required aria-required="true" />
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="hello@brand.com" required aria-required="true" />
+        </div>
+        <button type="submit" id="submit-btn">Join Now</button>
+
+        <p id="form-feedback" class="form-message" role="status" aria-live="polite" hidden></p>
+      </form>
+
+      <noscript>
+        <p style="text-align:center; color:#6b7280; margin-top:12px;">JavaScript is disabled — to join the waitlist, email <a href="mailto:hello@pixelpulse.studio">hello@pixelpulse.studio</a></p>
+      </noscript>
+    </section>
+
+    <!-- About -->
+    <section aria-labelledby="about-heading">
+      <h2 id="about-heading">About Us</h2>
+      <p class="about">We believe creativity and consistency are the heartbeat of digital success. PixelPulse Studio was founded to help brands not only look good but connect deeply with their audiences.</p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Contact: <a href="mailto:hello@pixelpulse.studio">hello@pixelpulse.studio</a> | Instagram: <a href="https://instagram.com/pixelpulse.studio" target="_blank" rel="noopener">@pixelpulse.studio</a></p>
+    <p>&copy; 2026 PixelPulse Studio</p>
+  </footer>
+
+  <script>
+    // Simple client-side waitlist submit with graceful fallback
+    (function(){
+      const form = document.getElementById('waitlist-form');
+      const feedback = document.getElementById('form-feedback');
+      const submitBtn = document.getElementById('submit-btn');
+
+      function showMessage(msg, success=true){
+        feedback.hidden = false;
+        feedback.textContent = msg;
+        feedback.style.color = success ? 'var(--brand-2)' : '#b91c1c';
+      }
+
+      async function submitForm(data){
+        // Replace this URL with your backend or email service endpoint
+        const endpoint = 'https://example.com/api/waitlist';
+        try {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify(data),
+            mode: 'cors'
+          });
+          if (res.ok) return { ok: true };
+          const text = await res.text();
+          return { ok: false, error: text || res.statusText };
+        } catch (err) {
+          return { ok: false, error: err.message || 'Network error' };
+        }
+      }
+
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        feedback.hidden = true;
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+
+        if(!name || !email){
+          showMessage('Please enter your name and a valid email address.', false);
+          return;
+        }
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        // Try to submit via fetch. If it fails, provide a mailto fallback.
+        const payload = { name, email, source: 'website-waitlist', timestamp: new Date().toISOString() };
+        const result = await submitForm(payload);
+
+        if (result.ok){
+          showMessage('Thanks — you’re on the list! We’ll email you soon.');
+          form.reset();
+        } else {
+          // Fallback: open mail client with prefilled subject/body
+          showMessage('Couldn’t reach the server. Opening your email client as a fallback…', false);
+          const mailto = `mailto:hello@pixelpulse.studio?subject=${encodeURIComponent('Waitlist: ' + name)}&body=${encodeURIComponent('Please add me to the waitlist.\n\nName: ' + name + '\nEmail: ' + email)}`;
+          // small delay to let user read the message
+          setTimeout(()=> window.location.href = mailto, 1200);
+        }
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Join Now';
+      });
+    })();
+  </script>
+</body>
+</html>
